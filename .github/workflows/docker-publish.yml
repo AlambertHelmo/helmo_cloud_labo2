@@ -21,4 +21,4 @@ jobs:
         run: python3 helloworld.py
         
       - name: Build Docker
-        run: docker build . --file Dockerfile --tag hello_world!:$(date +%s)
+        run: docker build . --file Dockerfile --tag helloworld:$(date +%s)

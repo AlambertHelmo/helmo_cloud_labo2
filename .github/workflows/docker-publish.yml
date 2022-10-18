@@ -1,4 +1,4 @@
-name: Python package
+name: Hello World
 
 on: [push]
 
@@ -17,5 +17,5 @@ jobs:
           # Optional - x64 or x86 architecture, defaults to x64
           architecture: 'x64'
       # You can test your matrix by printing the current Python version
-      - name: Display Python version
+      - name: Display Hello World!
         run: python3 helloworld.py

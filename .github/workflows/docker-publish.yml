@@ -19,3 +19,6 @@ jobs:
       # You can test your matrix by printing the current Python version
       - name: Display Hello World!
         run: python3 helloworld.py
+        
+      - name: Build Docker
+        run: docker build . --file ../../../Dockerfile --tag Hello world!:$(date +%s)

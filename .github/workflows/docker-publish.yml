@@ -23,9 +23,5 @@ jobs:
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
       - name: Display Hello World!
         run: python3 helloworld.py
-      - name: Scan image
-        uses: Azure/container-scan@v0
-        with:
-          image-name: ${{ secrets.ACR_LOGIN_SERVER }}/spring-petclinic:${{ github.run_number }}
-          severity-threshold: CRITICAL
-          run-quality-checks: true  
+      - name: build docker
+        run: docker build -t helloworld-app -f ./Dockerfile .
